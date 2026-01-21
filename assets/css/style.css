@@ -70,6 +70,29 @@ h6 {
   transition: ease-in-out 0.3s;
 }
 
+#header .header-profile {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#header .header-profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  #header .header-profile-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
 #header h1 {
   font-size: 48px;
   margin: 0;
@@ -91,20 +114,7 @@ h6 {
 #header h2 {
   font-size: 24px;
   margin-top: 20px;
-  color: #4a5568;
-}
-
-#header h2 span {
-  color: #667eea;
-  border-bottom: 2px solid #667eea;
-  padding-bottom: 6px;
-}
-
-#header h2 .animated-role {
-  display: inline-block;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  min-width: 280px;
-  text-align: right;
+  color: #000000;
 }
 
 #header .header-description {
