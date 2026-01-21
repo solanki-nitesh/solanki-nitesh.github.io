@@ -61,7 +61,7 @@ h6 {
   height: 100vh;
   display: flex;
   align-items: center;
-  z-index: 997;
+  z-index: 9999;
   overflow-y: auto;
   text-align: right;
 }
@@ -493,6 +493,7 @@ h6 {
   right: 0;
   background: #ffffff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 9998;
 }
 
 #header.header-top .social-links,
@@ -511,6 +512,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  height: 100%;
 }
 
 #header.header-top .nav-menu {
@@ -582,22 +584,28 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   width: 100%;
   top: 140px;
   bottom: 100%;
   opacity: 0;
   transition: ease-in-out 0.4s;
-  z-index: 2;
+  z-index: 1;
+  pointer-events: none;
 }
 
 section.section-show {
-  top: 75px;
+  top: 100px;
   left: -40px;
   bottom: auto;
   opacity: 1;
   padding-bottom: 45px;
+  z-index: 1;
+  position: absolute;
+  pointer-events: auto;
+  overflow-y: auto;
+  min-height: calc(100vh - 100px);
 }
 
 section .container {
@@ -613,8 +621,9 @@ section .container {
     top: 100px;
   }
   section.section-show {
-    top: 60px;
+    top: 90px;
     left: 0;
+    min-height: calc(100vh - 90px);
   }
   
   section .container {
@@ -627,9 +636,10 @@ section .container {
     top: 80px;
   }
   section.section-show {
-    top: 50px;
+    top: 70px;
     left: 0;
     padding-bottom: 30px;
+    min-height: calc(100vh - 70px);
   }
   
   section .container {
@@ -643,9 +653,10 @@ section .container {
     top: 70px;
   }
   section.section-show {
-    top: 40px;
+    top: 65px;
     left: 0;
     padding-bottom: 20px;
+    min-height: calc(100vh - 65px);
   }
   
   section .container {
